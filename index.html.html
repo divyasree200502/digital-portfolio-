@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8c8dc; /* Baby pink background */
+        }
+
+        header {
+            background-color: #ffb6c1; /* Light pink header */
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        /* Typing effect for each letter */
+        .typing-effect {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #ffffff;
+            animation: typing 2s steps(9, end), blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 9ch; } /* Length of "DIVYA SREE" */
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Profile picture styles */
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        }
+
+        nav {
+            background-color: #ffc2d2;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background-color: #e57373;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        .download-button:hover {
+            background-color: #ffc2d2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #ffc2d2;
+            color: #000000;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="pic.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1 class="typing-effect">DIVYA SREE</h1>
+            <p>I am a Student</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am a passionate and dedicated second-year Computer Applications student with a strong interest in programming, web development, and problem-solving. Skilled in creating responsive and dynamic websites using HTML, CSS, and JavaScript, I enjoy turning ideas into interactive digital experiences. I am a quick learner with excellent analytical and teamwork skills, eager to apply my academic knowledge to real-world projects and make a meaningful impact in the tech industry.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>BSc Computer Science</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+     
+    <section id="project">
+    <div class="section-content">
+         <centre>
+             <h2>Project</h2>
+             <p>MY DIGITAL PORTFOLIO</p>
+            </div>
+         </section>
+
+    <section id="resume">
+        <div class="section-content">
+            <center>
+                <h2>Resume</h2>
+                <a href="resume.pdf" target="_blank" class="download-button">Download CV</a>
+            </center>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DIVYA SREE</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
